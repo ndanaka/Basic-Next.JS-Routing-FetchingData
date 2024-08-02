@@ -1,5 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 const products = [
   {
     id: 1,
@@ -19,10 +21,20 @@ const products = [
 ];
 
 const ProductList = () => {
+  const router = useRouter();
+  console.log(router);
+
   return (
     <ul>
       {products.map((productItem) => {
-        return <li key={productItem.id}>{productItem.name}</li>;
+        return (
+          <li
+            onClick={() => router.push(`/products/${productItem.id}`)}
+            key={productItem.id}
+          >
+            {productItem.name}
+          </li>
+        );
       })}
     </ul>
   );
