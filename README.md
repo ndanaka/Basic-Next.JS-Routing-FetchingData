@@ -38,5 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Git Repogitory
 
 ```
-https://github.com/mythofmidas/Blog-Next.JS_v13.git
+https://github.com/mythofmidas/Basic-Next.JS-Routing-FetchingData.git
 ```
