@@ -1,41 +1,40 @@
+/**
+ * @desc Product list component
+ * @createdBy Midas
+ * @createdAt 08/01/2024
+ * @updatedAt 08/01/2024
+ */
+
 "use client";
 
 import { useRouter } from "next/navigation";
 
-const products = [
-  {
-    id: 1,
-    name: "Product 1",
-    description: "Product1",
-  },
-  {
-    id: 2,
-    name: "Product 2",
-    description: "Product2",
-  },
-  {
-    id: 3,
-    name: "Product 3",
-    description: "Product3",
-  },
-];
+// Define product types
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+}
 
-const ProductList = () => {
+const ProductList = ({ products }: { products: Product[] }) => {
   const router = useRouter();
-  console.log(router);
 
   return (
     <ul>
-      {products.map((productItem) => {
-        return (
-          <li
-            onClick={() => router.push(`/products/${productItem.id}`)}
-            key={productItem.id}
-          >
-            {productItem.name}
-          </li>
-        );
-      })}
+      {products && products.length ? (
+        products.map((item) => {
+          return (
+            <li
+              onClick={() => router.push(`/products/${item.id}`)}
+              key={item.id}
+            >
+              {item.id} {item.title}
+            </li>
+          );
+        })
+      ) : (
+        <h1>No Products</h1>
+      )}
     </ul>
   );
 };

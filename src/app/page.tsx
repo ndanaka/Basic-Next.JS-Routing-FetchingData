@@ -1,3 +1,10 @@
+/**
+ * @desc Main Page
+ * @createdBy Midas
+ * @createdAt 08/01/2024
+ * @updatedAt 08/01/2024
+ */
+
 import Link from "next/link";
 
 const Home = () => {

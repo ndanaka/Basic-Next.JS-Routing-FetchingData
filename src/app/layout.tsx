@@ -1,3 +1,10 @@
+/**
+ * @desc Main layout
+ * @createdBy Midas
+ * @createdAt 08/01/2024
+ * @updatedAt 08/01/2024
+ */
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
